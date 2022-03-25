@@ -1,0 +1,749 @@
+/* Clases globales */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    max-width: 30em;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5{
+    text-align: center;
+}
+
+/* barra navegacion */
+
+header {
+    background-color: rgb(236, 139, 48);
+    grid-area: header;
+}
+
+.container-logo{ 
+    display: flex; 
+    justify-content: center; 
+    width: 100vw; 
+}
+
+.nav-menu-items{
+    display:flex;
+    margin: auto;
+    width: 80vw;
+    margin-top: 0;
+    justify-content: center;
+    background-color: blanchedalmond;
+    border-radius:2rem;
+}
+
+.nav-menu-items-links {
+    padding: 1.6rem 1rem;
+    text-align: center;
+    width: 12rem;
+}
+
+.nav-menu-items-links:hover{
+    background-color: rgb(236, 161, 48);
+    border-radius: 1rem;
+}
+
+/* submenu productos */
+
+.submenu {
+    display:none;
+    position:absolute;
+    border-color: white;
+    text-align: center;
+}
+
+.submenu a {
+    color: white;
+}
+
+#nav-item-productos:hover #submenu-productos{
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 1.5rem;
+    width: 9.5rem;
+    border-color: rgba(38, 4, 39, 0.6);
+    border-style: solid;
+    border-radius:0 0 1rem 1rem;
+    line-height: 2rem;
+}
+
+/* submenu blog */
+
+#nav-item-blog:hover #submenu-blog{
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    width:9.5rem;
+    margin-top: 1.5rem;
+    border-color: rgba(38, 4, 39, 0.6);
+    border-radius:0 0 1rem 1rem;
+    line-height: 2rem;
+}
+
+/* submenu ayuda */
+#nav-item-contacto:hover #submenu-contacto{
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 1.5rem;
+    width: 9.5rem;
+    border-color: rgba(38, 4, 39, 0.6);
+    border-width: 2px;
+    border-style: solid;
+    border-radius:0 0 1rem 1rem;
+    line-height: 2rem;
+}
+
+
+/* main index */
+/* layout general de la pag */
+#grid-layout{
+    display: grid;
+    height: 180vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+
+#header-area{
+    grid-area: header;
+}
+
+#main-area-index{
+    grid-area: main ;
+}
+
+#footer-area{
+    grid-area: footer ;
+}
+
+/*   fin layout general */ 
+
+/* main del index */ 
+
+.grid-container {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 100vh;
+    gap: 2rem;
+}
+
+.imagen-index {
+    background-image: url(../multimedia/imagenmain.jpg);
+    background-size: cover;
+    border-radius: 24px 0 0 24px;
+    margin-left: 2vw;
+    grid-column: 1/7;
+    grid-row: 1 / 9;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.saludo-entrada {
+    background-color: rgb(236, 161, 48,0.6);
+    padding: 5rem;
+    height: fit-content;
+    border-radius: 24px;
+    grid-column: 5 / 10;
+    grid-row: 2 / 7;
+    z-index: 999;
+    margin-right: 4vw;
+}
+
+
+.btn-explorar{
+    background-color: rgb(236, 139, 48); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1,5rem;
+    margin-left: 14vw;
+    margin-top: 5vh;
+}
+
+.btn-explorar:hover{
+    cursor: pointer;
+    background-color: rgb(184, 84, 27);
+}
+
+@media only screen and (max-width: 1000px) {
+    .saludo-entrada {
+        grid-column: 1 / 10;
+        grid-row: 1 / 10;
+        margin-left: 8vw;
+        color: white;
+    }
+
+    .imagen-index {
+        grid-column: 1 / 10;
+        grid-row: 1 / 10;
+    }
+
+}
+
+/* footer */ 
+
+footer {
+    grid-area:footer;
+    background-color:rgba(225, 132, 228, 0.8);
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1auto 1auto;
+    max-height: 22rem;
+    padding: 5rem;
+    justify-items: center;
+    line-height: 1,5rem;
+    grid-template-areas: 
+    "c1 c2 c3 c4 c5"
+    "d d d d d"
+    ;
+}
+
+.footer-columna-1{
+    grid-area: c1;
+    margin-top: 2em;
+}
+
+.footer-columna-2{
+    grid-area: c2;
+    margin-top: 2em;
+}
+
+.footer-columna-3{
+    grid-area: c3;
+    margin-top: 2em;
+}
+
+.footer-columna-4{
+    grid-area: c4;
+    margin-top: 2em;
+}
+
+.footer-columna-5{
+    grid-area: c5;
+    margin-top: 2em;
+}
+
+.derechos-reservados{
+    grid-area: d;
+}
+
+#footer-nosotros:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-productos:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-blog:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-contacto:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-recetas:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-viajes:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-salud:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-politicas:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-entrega:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-prep:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer-escribenos:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* Página nosotros */
+
+/* layout grid */
+#grid-layout{
+    display: grid;
+    height: 180vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+
+#header-area{
+    grid-area: header;
+}
+
+#main-area{
+    grid-area: main ;
+}
+
+#footer-area{
+    grid-area: footer ;
+}
+/* fin layout grid */
+
+.container{
+    display:grid;
+    height: 180vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15, 1fr);
+}
+
+#header{
+    grid-row: 1 / 4;
+    grid-column: 1;
+}
+
+#main{
+    grid-row: 4 / 10;
+    grid-column: 1;
+}
+
+#footer{
+    grid-row: 12 / 16;
+    grid-column:1;
+}
+
+.contenedor-nosotros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5vh;
+}
+.contenedor-imagen {
+    margin: 2vh 2vw 5h 2vw;
+}
+
+.imagen-nosotros{
+    border-radius: 24px 0 0 0;
+}
+
+.contenido-nosotros h1{
+    background-color: rgb(236, 161, 48,0.6);
+    display: inline;
+    padding: 1rem;
+    border-radius: 24px;
+    grid-area: titulo;
+    max-width: min-content;
+}
+
+.contenido-nosotros p{
+    margin-top: 4rem;
+}
+/* ----------------PRODUCTOS---------------*/
+
+.titulo-principal-productos {
+    padding: 3rem;
+    background-color: rgba(62, 37, 63);
+    color: whitesmoke;
+    width: 70vw;
+    margin: 5rem auto 2rem auto;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.titulo-producto {
+    background-color: black;
+    color: rgb(247, 235, 235);
+    border-radius: 12px;
+    padding: 15px;
+    max-width: fit-content;
+    opacity: 0.5;
+}
+
+
+.container-producto {
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(225, 132, 228, 0.4);
+    width: 70vw;
+    margin-left: 15vw;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 24px;
+    flex-wrap: wrap;
+}
+
+.container-producto.par{
+    color:white;
+    background-color: rgba(62, 37, 63);
+    
+}
+
+.titulo-producto{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 20vw;
+    background-color: black;
+    color: rgb(247, 235, 235);
+    opacity: 0.5;
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.imagen-producto{
+    border-radius: 50%;
+    justify-content: center;
+    margin: 7rem 1rem 2rem 1rem;
+}
+
+.descripcion-producto {
+    margin: 8rem 1rem 2rem 1rem;
+    width: 25rem;
+}
+
+.tabla-producto{
+    margin-top: 4rem;
+}
+
+#tabla-informacion-nutricional{
+    color: white;
+    border-spacing: 1.5rem;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 12px;
+}
+
+/*-----------------BLOG--------------------*/
+
+#titulo-blog {
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+    color: whitesmoke;
+    width: 70vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 1rem;   
+}
+
+.blog-temas{
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    width: 50vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 25px;  
+}
+
+.entrada {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(225, 132, 228, 0.2);
+    margin-top: 20px;
+    margin-bottom:40px;
+    background-repeat: no-repeat;
+    height: 50vh;
+    border-radius: 24px;
+    margin-left: 10px;
+}
+
+.entrada-texto{
+    background-color: rgba(225, 132, 228, 0.8);
+    border-radius: 24px;
+    padding: 5px;
+}
+
+.entrada .uno{
+    background-image: url("../multimedia/gajar.jpg");
+    
+}
+
+.entrada .dos{
+    background-image: url("../multimedia/chilli-oil.jpg");
+    
+}
+
+.entrada .tres{
+    background-image: url("../multimedia/kimono.jpg");
+    
+}
+.entrada .cuatro{
+    background-image: url("../multimedia/spices.webp");
+}
+.entrada .cinco{
+    background-image: url("../multimedia/koyasan.jpg");
+}
+.entrada .seis{
+    background-image: url("../multimedia/kanazawa.JPG");
+}
+
+.entrada .siete{
+    background-image: url("../multimedia/muroxian.jpeg");
+    margin-bottom: 100px;
+}
+
+
+.btn-leer-mas{
+    background-color:rgba(38, 4, 39); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1,5rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+.btn-leer-mas:hover{
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    font-weight: bold;
+    border-style: solid;
+}
+
+/* ----------------CONTACTO----------------*/
+
+
+.contenedor-faq {
+    background-color: rgba(241, 201, 142, 0.2);
+    width: 60vw;
+    margin: auto;
+    margin-top: 5rem;
+}
+.titulo-faq {
+    text-align: center;
+    padding: 5rem;
+    background-color: black;
+    color: whitesmoke;
+    width: 60vw;
+    margin: auto;
+    border-radius: 25px;
+    margin-top: 5rem;
+}
+
+.contenedor-faq p{
+    margin: auto;
+    width: 34vw;
+}
+
+
+.contenedor-faq h4 {
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    width: 34vw;
+}
+
+.faq-pregunta {
+    background-color: rgb(236, 161, 48);
+    color: rgb(247, 235, 235);
+    border-radius: 12px;
+    padding: 1.2rem;
+}
+
+.faq-respuesta{
+    background-color: rgb(236, 161, 48, 0.5);
+    border-radius: 12px;
+    padding: 3rem;
+}
+
+table {
+    margin: 1rem auto 1rem auto;
+    background-color:rgb(236, 161, 48);
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+#container-contacto {
+    background-image: url(../multimedia/contacto.jpg);
+    height: 70vh;
+    margin-top: 3vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 8vh;
+    color: whitesmoke;
+}
+
+#contact-form-titulo {
+    padding:0.5rem;
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgba(241, 201, 142, 0.8);
+    width: 50vw;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#contact-form-inputs {
+    margin: 1vh auto 8vh auto;
+    text-align: center;
+    background: rgba(225, 132, 228, 0.4);
+    width: 50vw;
+    height: 55vh;
+    border-radius:25px;
+}
+
+#contact-form-inputs input {
+    padding: 6px;
+    margin-top: 8px;
+}
+
+#contact-form-inputs label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+
+#contact-form-inputs button{
+    border-radius: 25px; 
+    width: 5vw;
+    height: 3vh; 
+    border-color:rgba(38, 4, 39);
+    border-width: 1px;
+    background-color: blanchedalmond;
+    min-width: fit-content;
+}
+
+#contact-form-inputs button:hover{
+    background-color: rgba(38, 4, 39, 0.6);
+    color: blanchedalmond;
+    border-color: blanchedalmond;
+    font-weight: bold
+}
+
+@media screen and (max-width: 768px) {
+
+    /*  Barra navegacion */
+    .container-logo{ 
+        width: 50vw;
+        margin: auto;
+    }
+
+    .nav-menu-items{ 
+        flex-direction: column;
+    }
+
+    #nav-item-productos:hover #submenu-productos{
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        margin-top: -2.75rem;
+        margin-left:12rem;
+        width: 9.5rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-style: solid;
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
+
+    #nav-item-blog:hover #submenu-blog{
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        width:9.5rem;
+        margin-top: -2.70rem;
+        margin-left:12rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
+    
+    #nav-item-contacto:hover #submenu-contacto{
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        margin-top: -2.70rem;
+        width: 9.5rem;
+        margin-left:12rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-width: 2px;
+        border-style: solid;
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
+
+    /* Footer */ 
+
+    footer{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr 2fr;
+        min-height: fit-content;
+        min-width: fit-content;
+        grid-template-areas: 
+        "c1 c2"
+        "c3 c4"
+        "c5 c5"
+        "d d"
+
+    }
+} 
+
+
+    /* contacto (trabajar en acordeon de FAQ) */
+
