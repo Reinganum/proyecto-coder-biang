@@ -1,4 +1,4 @@
-/* Clases globales */
+/* CLASES GLOBALES */
 
 * {
     margin: 0;
@@ -28,7 +28,7 @@ h5{
     text-align: center;
 }
 
-/* barra navegacion */
+/* ----------------BARRA NAVEGACION------------- */
 
 header {
     background-color: rgb(236, 139, 48);
@@ -86,6 +86,9 @@ header {
     border-radius:0 0 1rem 1rem;
     line-height: 2rem;
 }
+.icon.ion-md-arrow-dropright{
+    display: none;
+}
 
 /* submenu blog */
 
@@ -116,103 +119,74 @@ header {
     line-height: 2rem;
 }
 
+/*-------NAV MEDIA QUERIES---------- */
 
-/* main index */
-/* layout general de la pag */
-#grid-layout{
-    display: grid;
-    height: 180vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer"
-    ;
-}
+@media screen and (max-width: 768px) {
 
-#header-area{
-    grid-area: header;
-}
-
-#main-area-index{
-    grid-area: main ;
-}
-
-#footer-area{
-    grid-area: footer ;
-}
-
-/*   fin layout general */ 
-
-/* main del index */ 
-
-.grid-container {
-    display: grid;
-    margin-top: 5rem;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    height: 100vh;
-    gap: 2rem;
-}
-
-.imagen-index {
-    background-image: url(../multimedia/imagenmain.jpg);
-    background-size: cover;
-    border-radius: 24px 0 0 24px;
-    margin-left: 2vw;
-    grid-column: 1/7;
-    grid-row: 1 / 9;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-.saludo-entrada {
-    background-color: rgb(236, 161, 48,0.6);
-    padding: 5rem;
-    height: fit-content;
-    border-radius: 24px;
-    grid-column: 5 / 10;
-    grid-row: 2 / 7;
-    z-index: 999;
-    margin-right: 4vw;
-}
-
-
-.btn-explorar{
-    background-color: rgb(236, 139, 48); 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1,5rem;
-    margin-left: 14vw;
-    margin-top: 5vh;
-}
-
-.btn-explorar:hover{
-    cursor: pointer;
-    background-color: rgb(184, 84, 27);
-}
-
-@media only screen and (max-width: 1000px) {
-    .saludo-entrada {
-        grid-column: 1 / 10;
-        grid-row: 1 / 10;
-        margin-left: 8vw;
-        color: white;
+    /*  Barra navegacion */
+    .container-logo{ 
+        width: 50vw;
+        margin: auto;
     }
 
-    .imagen-index {
-        grid-column: 1 / 10;
-        grid-row: 1 / 10;
+    .icon.ion-md-arrow-dropright{
+        display: inline;
     }
 
+    .icon.ion-ios-arrow-down{
+        display: none;
+    }
+
+    #link-productos, #link-blog, #link-contacto{
+        pointer-events: none;
+    }
+
+    .nav-menu-items{ 
+        flex-direction: column;
+    }
+
+    #nav-item-productos:hover #submenu-productos{
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        margin-top: -2.75rem;
+        margin-left:12rem;
+        width: 7rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-style: solid;
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
+    #nav-item-blog:hover #submenu-blog{
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        width:7rem;
+        margin-top: -2.70rem;
+        margin-left:12rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
+    
+    #nav-item-contacto:hover #submenu-contacto{
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        margin-top: -2.70rem;
+        width: 7rem;
+        margin-left:12rem;
+        border-color: rgba(38, 4, 39, 0.6);
+        border-width: 2px;
+        border-style: solid;
+        border-radius:0 1rem 1rem 1rem;
+        line-height: 2rem;
+    }
 }
 
-/* footer */ 
+/* -------------------FOOTER---------------- */ 
 
 footer {
     grid-area:footer;
@@ -220,8 +194,8 @@ footer {
     display:grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1auto 1auto;
-    max-height: 22rem;
-    padding: 5rem;
+    height: max-content;
+    padding: 1rem;
     justify-items: center;
     line-height: 1,5rem;
     grid-template-areas: 
@@ -313,16 +287,33 @@ footer {
     text-decoration: underline;
     font-weight: bold;
 }
+/*------------------ MEDIA QUERIES FOOTER-------------*/
 
+@media screen and (max-width: 768px) {
 
-/* Página nosotros */
+    /* Footer */ 
 
-/* layout grid */
-#grid-layout{
+    footer{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr 2fr;
+        min-height: fit-content;
+        min-width: fit-content;
+        grid-template-areas: 
+        "c1 c2"
+        "c3 c4"
+        "c5 c5"
+        "d d"
+
+    }
+} 
+
+/* GRID LAYOUT PARA LA PAGINA INDEX */
+
+.index-grid {
     display: grid;
-    height: 180vh;
+    height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     grid-template-areas: 
     "header header"
     "main main"
@@ -330,73 +321,159 @@ footer {
     ;
 }
 
-#header-area{
+header {
     grid-area: header;
 }
 
-#main-area{
-    grid-area: main ;
+.index-main {
+    grid-area: main;
 }
 
-#footer-area{
-    grid-area: footer ;
-}
-/* fin layout grid */
-
-.container{
-    display:grid;
-    height: 180vh;
-    width: 100vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(15, 1fr);
+footer {
+    grid-area:footer;
 }
 
-#header{
-    grid-row: 1 / 4;
-    grid-column: 1;
+/* ----------- CONTENIDO INDEX --------------*/
+
+.contenedor-index {
+    display:flex;
+    height: 100vh;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-#main{
-    grid-row: 4 / 10;
-    grid-column: 1;
+#img-index {
+    background-image: url(/multimedia/imagenmain.jpg);
+    width: 60vw;
+    height: 80vh;
+    border-radius: 2rem 0 0 2rem;
+    opacity: 0.8;
+    z-index: 1;
 }
 
-#footer{
-    grid-row: 12 / 16;
-    grid-column:1;
+.texto-index {
+    max-inline-size: 30rem;
+    align-self: center;
+    padding: 4rem;
+    background-color:rgb(236, 139, 48, 0.8);
+    z-index: 999;
+    margin: -10vw;
+    border-radius: 2rem;
+}
+
+.btn-explorar{
+    background-color: rgb(236, 139, 48); 
+    border: none;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1,5rem;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+/* ------------MEDIA QUERY DEL INDEX-----------*/
+
+/* ------------ MAIN---------------------- */
+@media screen and (max-width: 768px) {
+    .texto-index {
+        max-inline-size: 30rem;
+        align-self: center;
+        position: absolute; 
+        padding: 1rem;
+        margin-left: 0;
+        max-inline-size: 18rem;
+        color: white;
+    }
+}
+
+
+/*-------------PAGINA NOSOTROS----------*/
+
+/* LAYOUT GENERAL NOSOTROS */
+
+.nosotros-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+
+header {
+    grid-area: header;
 }
 
 .contenedor-nosotros{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5vh;
-}
-.contenedor-imagen {
-    margin: 2vh 2vw 5h 2vw;
+    grid-area: main;
 }
 
-.imagen-nosotros{
-    border-radius: 24px 0 0 0;
+footer {
+    grid-area:footer;
+}
+
+/* CONTENIDO NOSOTROS */ 
+
+.contenedor-nosotros{
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-nosotros-flex{
+    margin: 2rem;
+}
+
+.contenido-nosotros{
+    max-inline-size: 30rem;
+    min-inline-size: 20rem;
+    margin-left: 2rem;
 }
 
 .contenido-nosotros h1{
+    
     background-color: rgb(236, 161, 48,0.6);
     display: inline;
     padding: 1rem;
     border-radius: 24px;
-    grid-area: titulo;
     max-width: min-content;
 }
 
-.contenido-nosotros p{
-    margin-top: 4rem;
-}
-/* ----------------PRODUCTOS---------------*/
 
-.titulo-principal-productos {
+
+.contenido-nosotros p{
+    margin-top: 3rem;
+}
+
+/* --------CONTENIDO PAGINA PRODUCTOS -----*/
+
+.container-producto {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgba(225, 132, 228, 0.4);
+    width:70vw;
+    margin: 1rem auto 1rem auto;
+    border-radius: 1rem;
+}
+
+.container-producto.par{
+    padding: 2rem;
+    color:white;
+    background-color: rgba(62, 37, 63);
+    width: 70vw;
+}
+
+.titulo-principal {
     padding: 3rem;
     background-color: rgba(62, 37, 63);
     color: whitesmoke;
@@ -406,58 +483,34 @@ footer {
     text-align: center;
 }
 
-.titulo-producto {
-    background-color: black;
-    color: rgb(247, 235, 235);
-    border-radius: 12px;
-    padding: 15px;
-    max-width: fit-content;
-    opacity: 0.5;
-}
-
-
-.container-producto {
-    display:flex;
-    flex-direction: row;
-    background-color: rgba(225, 132, 228, 0.4);
-    width: 70vw;
-    margin-left: 15vw;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    border-radius: 24px;
-    flex-wrap: wrap;
-}
-
-.container-producto.par{
-    color:white;
-    background-color: rgba(62, 37, 63);
-    
-}
-
 .titulo-producto{
-    position: absolute;
-    margin-top: 1rem;
-    margin-left: 20vw;
     background-color: black;
     color: rgb(247, 235, 235);
     opacity: 0.5;
-    border-radius: 12px;
-    padding: 0.5rem;
+    border-radius: 1rem;
+    max-inline-size: fit-content;
+    padding: 0 1rem 0 1rem;
+    margin-left: 30%;
+    margin-bottom: 2rem;
 }
 
-.imagen-producto{
+.descripcion-producto{
+    display: flex;
+    height: 25vh;
+    width: 70vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.descripcion-producto p{
+    min-inline-size: 10rem;
+}
+
+.imagen-producto {
     border-radius: 50%;
-    justify-content: center;
-    margin: 7rem 1rem 2rem 1rem;
-}
-
-.descripcion-producto {
-    margin: 8rem 1rem 2rem 1rem;
-    width: 25rem;
-}
-
-.tabla-producto{
-    margin-top: 4rem;
+    min-width: 10rem;
+    min-height: 10rem;
 }
 
 #tabla-informacion-nutricional{
@@ -466,6 +519,33 @@ footer {
     background-color: black;
     opacity: 0.5;
     border-radius: 12px;
+}
+
+/* --------MEDIA QUERIES PRODUCTOS------*/
+
+@media screen and (max-width: 900px) {
+    .descripcion-producto{
+        flex-direction: column;
+        flex-flow: column;
+    }
+
+    .container-producto {
+        height: 85vh;
+    }
+
+    .imagen-producto {
+        margin-top: 30vh;
+        border-radius: 50%;
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+
+    .titulo-producto{
+    margin: 1rem auto 1rem auto;
+    }
+    #tabla-informacion-nutricional{
+        border-spacing: 1rem;
+    }
 }
 
 /*-----------------BLOG--------------------*/
@@ -568,57 +648,117 @@ footer {
     border-style: solid;
 }
 
-/* ----------------CONTACTO----------------*/
+/* LAYOUT GENERAL PAGINA CONTACTO */ 
 
-
-.contenedor-faq {
-    background-color: rgba(241, 201, 142, 0.2);
-    width: 60vw;
-    margin: auto;
-    margin-top: 5rem;
+.contacto-grid {
+    display: grid;
+    height: 250vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main"
+    "footer footer"
+    ;
 }
-.titulo-faq {
-    text-align: center;
-    padding: 5rem;
-    background-color: black;
+
+header {
+    grid-area: header;
+}
+
+.main-contacto{
+    grid-area: main;
+    background-color:rgb(248, 238, 223) ;
+}
+
+footer {
+    grid-area:footer;
+}
+
+/* ACORDEON PAGINA CONTACTO */ 
+
+.faq {
+    margin-top: 10vh;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(225, 132, 228, 0.8), rgb(236, 161, 48, 0.8))
+}
+
+.contenedor-acordeon {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.item-acordeon {
+    background-color:rgba(62, 37, 63,0.8);
+    border-radius:.4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.4);
+}
+
+.link-acordeon{
+    font-size: 1.2rem;
     color: whitesmoke;
-    width: 60vw;
-    margin: auto;
-    border-radius: 25px;
-    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
-.contenedor-faq p{
-    margin: auto;
-    width: 34vw;
+.link-acordeon i {
+    padding: 0.5rem;
 }
 
-
-.contenedor-faq h4 {
-    margin: 1rem auto 0 auto;
-    text-align: center;
-    width: 34vw;
+.link-acordeon .ion-md-remove{
+    display:none;
 }
 
-.faq-pregunta {
-    background-color: rgb(236, 161, 48);
-    color: rgb(247, 235, 235);
-    border-radius: 12px;
-    padding: 1.2rem;
+.respuesta{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(236, 161, 48, 1);
+    border-radius: 1rem;
+    color: whitesmoke;
+    transition: max-height 650ms;
 }
 
-.faq-respuesta{
-    background-color: rgb(236, 161, 48, 0.5);
-    border-radius: 12px;
-    padding: 3rem;
+.respuesta::before{
+    content:"";
+    position:absolute;
+    width: .6rem;
+    height:90%;
+    background-color: green;
+    top: 50%;
+    left: 0;
+    transform:translateY(-50%)
 }
 
-table {
-    margin: 1rem auto 1rem auto;
-    background-color:rgb(236, 161, 48);
+.respuesta p{
     padding: 2rem;
-    border-radius: 24px;
 }
+
+.item-acordeon:target .respuesta{
+    max-height: 20rem;
+}
+
+.item-acordeon:target .link-acordeon .ion-md-add{
+    display:none;
+}
+
+.item-acordeon:target .link-acordeon .ion-md-remove{
+    display:block;
+}
+
+/* -----------FORMULARIO CONTACTO---------------*/
 
 #container-contacto {
     background-image: url(../multimedia/contacto.jpg);
@@ -675,58 +815,9 @@ table {
     font-weight: bold
 }
 
+/*------------------ MEDIA QUERIES FOOTER-------------*/
+
 @media screen and (max-width: 768px) {
-
-    /*  Barra navegacion */
-    .container-logo{ 
-        width: 50vw;
-        margin: auto;
-    }
-
-    .nav-menu-items{ 
-        flex-direction: column;
-    }
-
-    #nav-item-productos:hover #submenu-productos{
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        margin-top: -2.75rem;
-        margin-left:12rem;
-        width: 9.5rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-style: solid;
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
-
-    #nav-item-blog:hover #submenu-blog{
-        text-align: center;
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        width:9.5rem;
-        margin-top: -2.70rem;
-        margin-left:12rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
-    
-    #nav-item-contacto:hover #submenu-contacto{
-        text-align: center;
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        margin-top: -2.70rem;
-        width: 9.5rem;
-        margin-left:12rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-width: 2px;
-        border-style: solid;
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
 
     /* Footer */ 
 
@@ -745,5 +836,4 @@ table {
 } 
 
 
-    /* contacto (trabajar en acordeon de FAQ) */
 

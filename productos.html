@@ -8,62 +8,61 @@
     <title>Biang Biang! Comida de Asia Hecha a Mano</title>
 </head>
 <body>
- <!------------------Barra de navegación------------------>
- <header>
-    <div class="container-logo">
-        <img src="multimedia/BIANG-BIANG-logo.png" alt="logo" class="logo">
+<!-----x-------------Barra navegación--------x--------->
+<body class="productos-grid">
+    <header>
+        <div class="container-logo">
+            <img src="multimedia/BIANG-BIANG-logo.png" alt="logo" class="logo">
+        </div>
+        <nav>    
+            <ul class="nav-menu-items">
+                <li class="nav-menu-items-links">
+                    <a href="index.html" class="home">Inicio</a>
+                </li>
+                <li class="nav-menu-items-links">
+                    <a href="nosotros.html">Acerca de Nosotros</a>
+                </li>
+                <li class="nav-menu-items-links" id="nav-item-productos">
+                    <a href="productos.html">Nuestros productos +</a>
+                    <ul class="submenu" id="submenu-productos">
+                        <li><a href="productos.html#producto-1">Dumplings</a></li>
+                        <li><a href="productos.html#producto-2">Baos</a></li>
+                        <li><a href="productos.html#producto-3">Bubble Tea</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu-items-links" id="nav-item-blog">
+                    <a href="blog.html">Blog +</a>
+                    <ul class="submenu" id="submenu-blog">
+                        <li><a href="Blog.html#recetas">Recetas</a></li>
+                        <li><a href="Blog.html#viajes">Viajes</a></li>
+                        <li><a href="Blog.html#salud">Salud</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu-items-links" id="nav-item-contacto">
+                    <a href="Contacto.html" class="contact">Ayuda +</a>
+                    <ul class="submenu" id="submenu-contacto">
+                        <li><a href="Contacto.html">FAQ</a></li>
+                        <li><a href="Contacto.html#contact-form-titulo">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     </div>
-    <div class="nav-bar-container">
-        <div class="navbar">
-        <ul class="nav-menu-items">
-            <li class="nav-menu-items-links">
-                <a href="index.html" class="home">Inicio</a>
-            </li>
-            <li class="nav-menu-items-links">
-                <a href="nosotros.html">Acerca de Nosotros</a>
-            </li>
-            <li class="nav-menu-items-links" id="nav-item-productos">
-                <a href="productos.html">Nuestros productos       +</a>
-                <ul class="submenu" id="submenu-productos">
-                    <li><a href="productos.html#producto-1">Dumplings</a></li>
-                    <li><a href="productos.html#producto-2">Baos</a></li>
-                    <li><a href="productos.html#producto-3">Bubble Tea</a></li>
-                </ul>
-            </li>
-            <li class="nav-menu-items-links" id="nav-item-blog">
-                <a href="blog.html">Blog      +</a>
-                <ul class="submenu" id="submenu-blog">
-                    <li><a href="Blog.html#recetas">Recetas</a></li>
-                    <li><a href="Blog.html#viajes">Viajes</a></li>
-                    <li><a href="Blog.html#salud">Salud</a></li>
-                </ul>
-            </li>
-            <li class="nav-menu-items-links" id="nav-item-contacto">
-                <a href="Contacto.html" class="contact">Ayuda      +</a>
-                <ul class="submenu" id="submenu-contacto">
-                    <li><a href="Contacto.html">FAQ</a></li>
-                    <li><a href="Contacto.html#contact-form-titulo">Contacto</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</header>
-<!-----x-------------Fin barra navegación--------x--------->
-    <!-------------------Bloque principal-------------------------->
-    <section>
-        <h2 class="titulo-principal-productos"h2>Nuestros Productos</h2>
+    <!-----x-------------Fin barra navegación--------x--------->
+
+    <!-----x----------Seccion principal---------------x------->
+
+    <main class="main-productos">
+        <h2 class="titulo-principal">Nuestros Productos</h2>
         <div class="container-producto">
             <div class="titulo-producto">
                 <h2 id="producto-1">Dumplings veganos con relleno tradicional</h2>
             </div>
-            <div class="div-img-producto">
-                <img src="multimedia/dumplings.jfif" alt="dumpling-soya" class="imagen-producto">
-            </div>
             <div class="descripcion-producto">
+                <img src="multimedia/dumplings.jfif" alt="dumpling-soya" class="imagen-producto">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur qui minima esse, eaque magnam! Corporis doloribus molestiae eligendi hic repellendus quas eaque fugit labore ipsum ipsam similique, rem illum!
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div class="tabla-producto">
                 <table id="tabla-informacion-nutricional">
                     <th>Atributo</th>
                     <th>100g</th>
@@ -91,15 +90,10 @@
             <div class="titulo-producto">
                 <h2 id="producto-1">Dumplings de sopa estilo Shanghai (小笼包)</h2>
             </div>
-            <div class="div-img-producto">
-                <img src="multimedia/dumplings_sopa.jpg" alt="dumpling-sopa" class="imagen-producto">
-            </div>
             <div class="descripcion-producto">
+                <img src="multimedia/dumplings_sopa.jpg" alt="dumpling-sopa" class="imagen-producto">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur qui minima esse, eaque magnam! Corporis doloribus molestiae eligendi hic repellendus quas eaque fugit labore ipsum ipsam similique, rem illum!
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div class="tabla-producto">
-               <div class="tabla-producto">
                 <table id="tabla-informacion-nutricional">
                     <th>Atributo</th>
                     <th>100g</th>
@@ -121,21 +115,16 @@
                         <td>1</td>
                     </tr> 
                 </table>
-                </div>
             </div>
         </div>
             <div class="container-producto">
                 <div class="titulo-producto">
                     <h2 id="producto-1">Twist Bao de Cebollín (花卷)</h2>
                 </div>
-                <div class="div-img-producto">
-                    <img src="multimedia/huajuan.jfif" alt="bao-cebollin" class="imagen-producto">
-                </div>
                 <div class="descripcion-producto">
+                    <img src="multimedia/huajuan.jfif" alt="bao-cebollin" class="imagen-producto">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur qui minima esse, eaque magnam! Corporis doloribus molestiae eligendi hic repellendus quas eaque fugit labore ipsum ipsam similique, rem illum!
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                </div>
-                <div class="tabla-producto">
                     <table id="tabla-informacion-nutricional">
                         <th>Atributo</th>
                         <th>100g</th>
@@ -160,51 +149,52 @@
                 </div>
             </div>
         </div>
-    <!----------X--------Fin Bloque principal------------X--------->
-<!-------------------Footer------------------------------------>
+    </main>
+    <!-----x----------Fin seccion principal---------------x------->
 
-<footer>
-    <div class="footer-columna-1">
-         <h4>Página</h4>
-         <ul>
-             <li id="footer-nosotros"><a href="Nosotros.html">Acerca de Nosotros</a></li>
-             <li id="footer-productos"><a href="Productos.html">Nuestros Productos</a></li>
-             <li id="footer-blog"><a href="Blog.html">Nuestro Blog</a></li>
-             <li id="footer-contacto"><a href="Contacto.html">Comunícate con nosotros</a></li>
-         </ul>
-     </div>
-     <div class="footer-columna-2">
-         <h4>Categorías Blog</h4>
-         <ul>
-             <li id="footer-recetas"><a href="Blog.html#recetas">Recetas</a></li>
-             <li id="footer-viajes"><a href="Blog.html#viajes">Viajes y cultura</a></li>
-             <li id="footer-salud"><a href="Blog.html#salud">Salud</a></li>
-         </ul>
-     </div>
-     <div class="footer-columna-3">
-         <h4>FAQ</h4>
-         <ul>
-             <li id="footer-politicas"><a href="Contacto.html#politicas-compra">Políticas de compra</a></li>
-             <li id="footer-entrega"><a href="Contacto.html#entrega">Sistema de entrega</a></li>
-             <li id="footer-prep"><a href="Contacto.html#preparacion">Preparación y conservación</a></li>
-         </ul>
-     </div>
-     <div class="footer-columna-4">
-         <h4>Escríbenos</h4>
-         <ul>
-             <li id="footer-escribenos"><a href="Contacto.html#contacto">Contacto</a></li>
-         </ul>
-     </div>
-     <div class="footer-columna-5">
-         <h4>Síguenos en RRSS!</h4>
-         <a href="" class="">Inst</a>
-         <a href="" class="">Face</a>
-         <a href="" class="">Spot</a>
-     </div>
-     <div class="derechos-reservados">
-         <h5>Todos los derechos reservados Biang Biang Ltda.</h5>
-     </div>
- </footer>
- <!----------x--------Footer--------------------------x--------->
+    <!-----x----------Fin seccion principal---------------x------->
+    <footer>
+        <div class="footer-columna-1">
+             <h4>Página</h4>
+             <ul>
+                 <li id="footer-nosotros"><a href="Nosotros.html">Acerca de Nosotros</a></li>
+                 <li id="footer-productos"><a href="Productos.html">Nuestros Productos</a></li>
+                 <li id="footer-blog"><a href="Blog.html">Nuestro Blog</a></li>
+                 <li id="footer-contacto"><a href="Contacto.html">Comunícate con nosotros</a></li>
+             </ul>
+         </div>
+         <div class="footer-columna-2">
+             <h4>Categorías Blog</h4>
+             <ul>
+                 <li id="footer-recetas"><a href="Blog.html#recetas">Recetas</a></li>
+                 <li id="footer-viajes"><a href="Blog.html#viajes">Viajes y cultura</a></li>
+                 <li id="footer-salud"><a href="Blog.html#salud">Salud</a></li>
+             </ul>
+         </div>
+         <div class="footer-columna-3">
+             <h4>FAQ</h4>
+             <ul>
+                 <li id="footer-politicas"><a href="Contacto.html#politicas-compra">Políticas de compra</a></li>
+                 <li id="footer-entrega"><a href="Contacto.html#entrega">Sistema de entrega</a></li>
+                 <li id="footer-prep"><a href="Contacto.html#preparacion">Preparación y conservación</a></li>
+             </ul>
+         </div>
+         <div class="footer-columna-4">
+             <h4>Escríbenos</h4>
+             <ul>
+                 <li id="footer-escribenos"><a href="Contacto.html#contacto">Contacto</a></li>
+             </ul>
+         </div>
+         <div class="footer-columna-5">
+             <h4>Síguenos en RRSS!</h4>
+             <a href="" class="">Inst</a>
+             <a href="" class="">Face</a>
+             <a href="" class="">Spot</a>
+         </div>
+         <div class="derechos-reservados">
+             <h5>Todos los derechos reservados Biang Biang Ltda.</h5>
+         </div>
+     </footer>
+</div>
 </body>
 </html>
