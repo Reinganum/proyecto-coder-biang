@@ -5,50 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- ICONOS-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <title>Biang Biang! Comida de Asia Hecha a Mano</title>
 </head>
-<!-----x-------------Barra navegación--------x--------->
-<body class="nosotros-grid">
-    <header>
-        <div class="container-logo">
-            <img src="multimedia/BIANG-BIANG-logo.png" alt="logo" class="logo">
-        </div>
-        <nav>    
-            <ul class="nav-menu-items">
-                <li class="nav-menu-items-links">
-                    <a href="index.html" class="home">Inicio</a>
-                </li>
-                <li class="nav-menu-items-links">
-                    <a href="nosotros.html">Acerca de Nosotros</a>
-                </li>
-                <li class="nav-menu-items-links" id="nav-item-productos">
-                    <a href="productos.html">Nuestros productos +</a>
-                    <ul class="submenu" id="submenu-productos">
-                        <li><a href="productos.html#producto-1">Dumplings</a></li>
-                        <li><a href="productos.html#producto-2">Baos</a></li>
-                        <li><a href="productos.html#producto-3">Bubble Tea</a></li>
-                    </ul>
-                </li>
-                <li class="nav-menu-items-links" id="nav-item-blog">
-                    <a href="blog.html">Blog +</a>
-                    <ul class="submenu" id="submenu-blog">
-                        <li><a href="Blog.html#recetas">Recetas</a></li>
-                        <li><a href="Blog.html#viajes">Viajes</a></li>
-                        <li><a href="Blog.html#salud">Salud</a></li>
-                    </ul>
-                </li>
-                <li class="nav-menu-items-links" id="nav-item-contacto">
-                    <a href="Contacto.html" class="contact">Ayuda +</a>
-                    <ul class="submenu" id="submenu-contacto">
-                        <li><a href="Contacto.html">FAQ</a></li>
-                        <li><a href="Contacto.html#contact-form-titulo">Contacto</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<!------------------Barra de navegación------------------>
+<header>
+    <div class="container-logo">
+        <img src="multimedia/BIANG-BIANG-logo.png" alt="logo" class="logo">
     </div>
-    <!-----x-------------Fin barra navegación--------x--------->
+    <div class="nav-bar-container">
+        <div class="navbar">
+        <ul class="nav-menu-items">
+            <li class="nav-menu-items-links">
+                <a href="index.html" class="home">Inicio</a>
+            </li>
+            <li class="nav-menu-items-links">
+                <a href="nosotros.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-menu-items-links" id="nav-item-productos">
+                <a href="productos.html" id="link-productos">Nuestros productos
+                    <i class="icon ion-ios-arrow-down"></i>
+                    <i class="icon ion-md-arrow-dropright"></i>
+                </a>
+                <ul class="submenu" id="submenu-productos">
+                    <li><a href="productos.html#producto-1">Dumplings</a></li>
+                    <li><a href="productos.html#producto-2">Baos</a></li>
+                    <li><a href="productos.html#producto-3">Bubble Tea</a></li>
+                </ul>
+            </li>
+            <li class="nav-menu-items-links" id="nav-item-blog">
+                <a href="blog.html" id="link-blog">Blog
+                    <i class="icon ion-ios-arrow-down"></i>
+                    <i class="icon ion-md-arrow-dropright"></i>
+                </a>
+                <ul class="submenu" id="submenu-blog">
+                    <li><a href="Blog.html#recetas">Recetas</a></li>
+                    <li><a href="Blog.html#viajes">Viajes</a></li>
+                    <li><a href="Blog.html#salud">Salud</a></li>
+                </ul>
+            </li>
+            <li class="nav-menu-items-links" id="nav-item-contacto">
+                <a href="Contacto.html" class="contact" id="link-contacto">Ayuda
+                    <i class="icon ion-ios-arrow-down"></i>
+                    <i class="icon ion-md-arrow-dropright"></i>
+                </a>
+                <ul class="submenu" id="submenu-contacto">
+                    <li><a href="Contacto.html">FAQ</a></li>
+                    <li><a href="Contacto.html#contact-form-titulo">Contacto</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-----x-------------Fin barra navegación--------x--------->
 
     <!-----x----------Seccion principal---------------x------->
 
