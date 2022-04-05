@@ -1,4 +1,4 @@
-/* CLASES GLOBALES */
+/* ----------------CLASES GLOBALES--------- */
 
 * {
     margin: 0;
@@ -14,359 +14,145 @@ a{
     color: black;
 }
 
+
 li{
     list-style: none;
 }
 
-p{
-    max-width: 30em;
-    text-align: justify;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body{
+    min-height: 100vh;
+}
+.line-break{
+    display:block;
 }
 
-h5{
-    text-align: center;
-}
+/* -------------------NAVBAR-----------------*/
 
-/* ----------------BARRA NAVEGACION------------- */
-
-header {
+.header{
     background-color: rgb(236, 139, 48);
-    grid-area: header;
 }
 
-.container-logo{ 
-    display: flex; 
-    justify-content: center; 
-    width: 100vw; 
+.logo-flex{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    height: 11rem;
+    background-color: rgb(236, 139, 48)
 }
-
-.nav-menu-items{
-    display:flex;
-    margin: auto;
-    width: 80vw;
-    margin-top: 0;
-    justify-content: center;
+#barra-nav{
     background-color: blanchedalmond;
-    border-radius:2rem;
+}
+.dropdown-menu{
+    background-color: black;
 }
 
-.nav-menu-items-links {
-    padding: 1.6rem 1rem;
-    text-align: center;
-    width: 12rem;
+.dropdown-menu a{
+    color: whitesmoke;
 }
 
-.nav-menu-items-links:hover{
+.nav-item{
+    width: 8rem;
+}
+
+
+.navbar{
+    padding-top: 0;
+}
+#logo{
+    background-image: url(../multimedia/BIANG-BIANG-logo.png);
+    background-repeat: no-repeat;
+    height: 15rem;
+    width: 15rem;
+}
+
+.nav-item:hover{   
     background-color: rgb(236, 161, 48);
     border-radius: 1rem;
 }
 
-/* submenu productos */
+/* ---------FOOTER-------------*/
 
-.submenu {
-    display:none;
-    position:absolute;
-    border-color: white;
-    text-align: center;
+footer.container-fluid{
+    background-color: rgba(225, 132, 228, 0.8);
+    position: sticky;
+    top: 100%;
+    padding: 2rem;
 }
 
-.submenu a {
-    color: white;
-}
-
-#nav-item-productos:hover #submenu-productos{
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 1.5rem;
-    width: 9.5rem;
-    border-color: rgba(38, 4, 39, 0.6);
-    border-style: solid;
-    border-radius:0 0 1rem 1rem;
-    line-height: 2rem;
-}
-.icon.ion-md-arrow-dropright{
-    display: none;
-}
-
-/* submenu blog */
-
-#nav-item-blog:hover #submenu-blog{
-    text-align: center;
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    width:9.5rem;
-    margin-top: 1.5rem;
-    border-color: rgba(38, 4, 39, 0.6);
-    border-radius:0 0 1rem 1rem;
-    line-height: 2rem;
-}
-
-/* submenu ayuda */
-#nav-item-contacto:hover #submenu-contacto{
-    text-align: center;
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 1.5rem;
-    width: 9.5rem;
-    border-color: rgba(38, 4, 39, 0.6);
-    border-width: 2px;
-    border-style: solid;
-    border-radius:0 0 1rem 1rem;
-    line-height: 2rem;
-}
-
-/*-------NAV MEDIA QUERIES---------- */
-
-@media screen and (max-width: 768px) {
-
-    /*  Barra navegacion */
-    .container-logo{ 
-        width: 50vw;
-        margin: auto;
-    }
-
-    .icon.ion-md-arrow-dropright{
-        display: inline;
-    }
-
-    .icon.ion-ios-arrow-down{
-        display: none;
-    }
-
-    #link-productos, #link-blog, #link-contacto{
-        pointer-events: none;
-    }
-
-    .nav-menu-items{ 
-        flex-direction: column;
-    }
-
-    #nav-item-productos:hover #submenu-productos{
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        margin-top: -2.75rem;
-        margin-left:12rem;
-        width: 7rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-style: solid;
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
-    #nav-item-blog:hover #submenu-blog{
-        text-align: center;
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        width:7rem;
-        margin-top: -2.70rem;
-        margin-left:12rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
-    
-    #nav-item-contacto:hover #submenu-contacto{
-        text-align: center;
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
-        margin-top: -2.70rem;
-        width: 7rem;
-        margin-left:12rem;
-        border-color: rgba(38, 4, 39, 0.6);
-        border-width: 2px;
-        border-style: solid;
-        border-radius:0 1rem 1rem 1rem;
-        line-height: 2rem;
-    }
-}
-
-/* -------------------FOOTER---------------- */ 
-
-footer {
-    grid-area:footer;
-    background-color:rgba(225, 132, 228, 0.8);
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1auto 1auto;
-    height: max-content;
-    padding: 1rem;
-    justify-items: center;
-    line-height: 1,5rem;
-    grid-template-areas: 
-    "c1 c2 c3 c4 c5"
-    "d d d d d"
-    ;
-}
-
-.footer-columna-1{
-    grid-area: c1;
-    margin-top: 2em;
-}
-
-.footer-columna-2{
-    grid-area: c2;
-    margin-top: 2em;
-}
-
-.footer-columna-3{
-    grid-area: c3;
-    margin-top: 2em;
-}
-
-.footer-columna-4{
-    grid-area: c4;
-    margin-top: 2em;
-}
-
-.footer-columna-5{
-    grid-area: c5;
-    margin-top: 2em;
+#footer-flex{
+    justify-content: center;
 }
 
 .derechos-reservados{
-    grid-area: d;
+    display: flex;
+    justify-content: center;
 }
 
-#footer-nosotros:hover {
-    text-decoration: underline;
+#footer-flex h4{
+    font-size: 1rem;
     font-weight: bold;
 }
 
-#footer-productos:hover {
-    text-decoration: underline;
+footer a:hover{
+    color: black;
+    text-decoration-line: underline;
     font-weight: bold;
-}
-
-#footer-blog:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-contacto:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-recetas:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-viajes:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-salud:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-politicas:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-entrega:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-prep:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#footer-escribenos:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-/*------------------ MEDIA QUERIES FOOTER-------------*/
-
-@media screen and (max-width: 768px) {
-
-    /* Footer */ 
-
-    footer{
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr 2fr;
-        min-height: fit-content;
-        min-width: fit-content;
-        grid-template-areas: 
-        "c1 c2"
-        "c3 c4"
-        "c5 c5"
-        "d d"
-
-    }
-} 
-
-/* GRID LAYOUT PARA LA PAGINA INDEX */
-
-.index-grid {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer"
-    ;
-}
-
-header {
-    grid-area: header;
-}
-
-.index-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area:footer;
 }
 
 /* ----------- CONTENIDO INDEX --------------*/
 
 .contenedor-index {
-    display:flex;
-    height: 100vh;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+    margin-top: 5rem;
+    display: grid;
+    height: 120vh;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contenedor-imagen{
+    grid-column: 2 / 4;
+    grid-row: 1 / 5;
 }
 
 #img-index {
     background-image: url(../multimedia/imagenmain.jpg);
-    width: 60vw;
-    height: 80vh;
+    min-width: 50vw;
+    min-height: 90vh;
     border-radius: 2rem 0 0 2rem;
     opacity: 0.8;
     z-index: 1;
 }
 
 .texto-index {
-    max-inline-size: 30rem;
-    align-self: center;
+    height: max-content;
+    width:fit-content;
+    grid-column: 3/5;
+    grid-row: 2/3;
     padding: 4rem;
     background-color:rgb(236, 139, 48, 0.8);
     z-index: 999;
-    margin: -10vw;
     border-radius: 2rem;   
     transition-duration: 1000ms; 
+}
+
+.texto-index h3{
+    font-size: 1rem;
+}
+
+.texto-index h1{
+    font-size: 1.2rem;
 }
 
 .texto-index:hover {
     background-color: rgb(121, 40, 158);
     color: white;
+}
+
+.texto-index p{
+    min-inline-size: 15rem;
+    max-inline-size: 30rem;
+    text-align: justify;
 }
 
 .btn-explorar{
@@ -389,71 +175,33 @@ footer {
     font-weight: bold;
     text-decoration-line: underline;
 }
-/* ------------MEDIA QUERY DEL INDEX-----------*/
 
-/* ------------ MAIN---------------------- */
-@media screen and (max-width: 768px) {
-    .texto-index {
-        max-inline-size: 30rem;
-        align-self: center;
-        position: absolute; 
-        padding: 1rem;
-        margin-left: 0;
-        max-inline-size: 18rem;
-        color: white;
+/* ------------------MEDIA QUERIES----------------*/
+
+@media only screen and (max-width: 1080px) {
+    .contenedor-index {
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+    .texto-index{
+        grid-column: 2/2;
+    }
+    .contenedor-imagen{
+        grid-column: 2/2;
     }
 }
 
+/* ----------- CONTENIDO NOSOTROS --------------*/
 
-/*-------------PAGINA NOSOTROS----------*/
-
-/* LAYOUT GENERAL NOSOTROS */
-
-.nosotros-grid {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer"
-    ;
+.container-nosotros{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-header {
-    grid-area: header;
-}
-
-.contenedor-nosotros{
-    grid-area: main;
-}
-
-footer {
-    grid-area:footer;
-}
-
-/* CONTENIDO NOSOTROS */ 
-
-.contenedor-nosotros{
-    margin: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.img-nosotros-flex{
-    margin: 2rem;
-}
-
-.contenido-nosotros{
-    max-inline-size: 30rem;
-    min-inline-size: 20rem;
+#contenido-nosotros{
     margin-left: 2rem;
 }
 
-.contenido-nosotros h1{
+#contenido-nosotros h1{
     
     background-color: rgb(236, 161, 48,0.6);
     display: inline;
@@ -462,322 +210,82 @@ footer {
     max-width: min-content;
 }
 
-
-
-.contenido-nosotros p{
-    margin-top: 3rem;
+#contenido-nosotros p{
+    max-inline-size: 30rem;
+    min-inline-size: 20rem;
+    margin-top: 2rem;
+    text-align: justify;
 }
 
-/* --------CONTENIDO PAGINA PRODUCTOS -----*/
+/* ----------- CONTENIDO PRODUCTOS --------------*/
+.titulo-producto{
+    margin-bottom: 1rem;
+}
 
-.container-producto {
-    display: flex;
-    flex-direction: column;
+.container-producto{
     padding: 2rem;
     background-image: linear-gradient(rgba(228, 65, 236, 0.4), rgba(107, 16, 112, 0.4));
     width:70vw;
-    margin: 1rem auto 1rem auto;
     border-radius: 1rem;
+    margin: auto;
 }
 
-.container-producto.par{
+.container-producto-par{
     padding: 2rem;
-    color:white;
-    background-image: linear-gradient(to left top(rgb(66, 11, 68), rgba(241, 156, 28, 0.8)));
-    width: 70vw;
-}
-
-.titulo-principal {
-    padding: 3rem;
-    background-image:linear-gradient(rgb(66, 11, 68),black);
     color: whitesmoke;
-    width: 70vw;
-    margin: 5rem auto 2rem auto;
-    border-radius: 25px;
-    text-align: center;
-    font-size: 2.5rem;
+    background-image: linear-gradient(rgb(84, 14, 86), rgba(6, 0, 10, 0.8));
+    width:70vw;
+    border-radius: 1rem;
+    margin: auto;
 }
 
-.titulo-producto{
-    background-color: black;
-    color: rgb(247, 235, 235);
-    opacity: 0.5;
-    border-radius: 1rem;
-    max-inline-size: fit-content;
-    padding: 0 1rem 0 1rem;
-    margin-left: 30%;
-    margin-bottom: 2rem;
+.imagen-producto{
+    border-radius: 50%;
 }
 
 .descripcion-producto{
-    display: flex;
-    height: 25vh;
-    width: 70vw;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.descripcion-producto p{
-    min-inline-size: 10rem;
-}
-
-.imagen-producto {
-    border-radius: 50%;
-    min-width: 10rem;
-    min-height: 10rem;
-}
-
-#tabla-informacion-nutricional{
-    color: white;
-    border-spacing: 1.5rem;
-    background-color: black;
-    opacity: 0.5;
-    border-radius: 12px;
-}
-
-/* --------MEDIA QUERIES PRODUCTOS------*/
-
-@media screen and (max-width: 900px) {
-    .descripcion-producto{
-        flex-direction: column;
-        flex-flow: column;
-    }
-
-    .container-producto {
-        height: 85vh;
-    }
-
-    .imagen-producto {
-        margin-top: 30vh;
-        border-radius: 50%;
-        min-width: 10rem;
-        min-height: 10rem;
-    }
-
-    .titulo-producto{
-    margin: 1rem auto 1rem auto;
-    }
-    #tabla-informacion-nutricional{
-        border-spacing: 1rem;
-    }
-}
-
-/*-----------------BLOG--------------------*/
-
-#titulo-blog {
-    text-align: center;
-    padding: 2rem;
-    background-color: black;
-    color: whitesmoke;
-    width: 70vw;
-    margin: auto;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    border-radius: 1rem;   
-}
-
-.blog-temas{
-    text-align: center;
-    padding: 1rem;
-    background-color: black;
-    color: whitesmoke;
-    width: 50vw;
-    margin: auto;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    border-radius: 25px;  
-}
-
-.entrada {
-    position: relative;
-    display: inline-block;
-    background-color: rgba(225, 132, 228, 0.2);
-    margin-top: 20px;
-    margin-bottom:40px;
-    background-repeat: no-repeat;
-    height: 50vh;
-    border-radius: 24px;
-    margin-left: 10px;
-}
-
-.entrada-texto{
-    background-color: rgba(225, 132, 228, 0.8);
-    border-radius: 24px;
-    padding: 5px;
-}
-
-.entrada .uno{
-    background-image: url("../multimedia/gajar.jpg");
-    
-}
-
-.entrada .dos{
-    background-image: url("../multimedia/chilli-oil.jpg");
-    
-}
-
-.entrada .tres{
-    background-image: url("../multimedia/kimono.jpg");
-    
-}
-.entrada .cuatro{
-    background-image: url("../multimedia/spices.webp");
-}
-.entrada .cinco{
-    background-image: url("../multimedia/koyasan.jpg");
-}
-.entrada .seis{
-    background-image: url("../multimedia/kanazawa.JPG");
-}
-
-.entrada .siete{
-    background-image: url("../multimedia/muroxian.jpeg");
-    margin-bottom: 100px;
-}
-
-
-.btn-leer-mas{
-    background-color:rgba(38, 4, 39); 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1,5rem;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 12px;
-}
-
-.btn-leer-mas:hover{
-    background-color: transparent;
-    color: black;
-    border-color: black;
-    font-weight: bold;
-    border-style: solid;
-}
-
-/* LAYOUT GENERAL PAGINA CONTACTO */ 
-
-.contacto-grid {
-    display: grid;
-    height: 250vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "main main"
-    "footer footer"
-    ;
-}
-
-header {
-    grid-area: header;
-}
-
-.main-contacto{
-    grid-area: main;
-    background-color:rgb(248, 238, 223) ;
-}
-
-footer {
-    grid-area:footer;
-}
-
-/* ACORDEON PAGINA CONTACTO */ 
-
-.faq {
-    margin-top: 10vh;
-    width:100%;
-    height: 100vh;
-    display: flex;
-    align-items:center;
+    max-inline-size: 25rem;
     justify-content: center;
+}
+
+/* ---------PAGINA CONTACTO SECCION FAQ-------------*/
+#main-contacto{
     background-image: linear-gradient(rgba(225, 132, 228, 0.8), rgb(236, 161, 48, 0.8))
 }
-
-.contenedor-acordeon {
-    width: 100%;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+#faq{
+    margin-top: 5rem;
 }
 
-.item-acordeon {
+.accordion-item{
     background-color:rgba(62, 37, 63,0.8);
+    width: 70vw;
+    margin: auto;
     border-radius:.4rem;
     margin-bottom: 1rem;
     padding: 1rem;
     box-shadow: .5rem 2px .5rem rgba(0,0,0,.4);
 }
 
-.link-acordeon{
+.accordion-body{
+    width: 70vw;
+    margin: auto;
+    color: whitesmoke;
+    margin-top: 0;
+    background-color:rgba(62, 37, 63,0.8);
+    border-radius:.4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.4);
     font-size: 1.2rem;
-    color: whitesmoke;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
 }
 
-.link-acordeon i {
-    padding: 0.5rem;
-}
-
-.link-acordeon .ion-md-remove{
-    display:none;
-}
-
-.respuesta{
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: rgb(236, 161, 48, 1);
-    border-radius: 1rem;
-    color: whitesmoke;
-    transition: max-height 650ms;
-}
-
-.respuesta::before{
-    content:"";
-    position:absolute;
-    width: .6rem;
-    height:90%;
-    background-color: green;
-    top: 50%;
-    left: 0;
-    transform:translateY(-50%)
-}
-
-.respuesta p{
-    padding: 2rem;
-}
-
-.item-acordeon:target .respuesta{
-    max-height: 20rem;
-}
-
-.item-acordeon:target .link-acordeon .ion-md-add{
-    display:none;
-}
-
-.item-acordeon:target .link-acordeon .ion-md-remove{
-    display:block;
-}
+/* ---------PAGINA CONTACTO SECCION CONTACTO-------------*/
 
 /* -----------FORMULARIO CONTACTO---------------*/
 
 #container-contacto {
     background-image: url(../multimedia/contacto.jpg);
-    height: 70vh;
+    height: 90vh;
     margin-top: 3vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -796,7 +304,7 @@ footer {
 }
 
 #contact-form-inputs {
-    margin: 1vh auto 8vh auto;
+    margin: 10vh auto 8vh auto;
     text-align: center;
     background: rgba(225, 132, 228, 0.4);
     width: 50vw;
@@ -830,25 +338,93 @@ footer {
     font-weight: bold
 }
 
-/*------------------ MEDIA QUERIES FOOTER-------------*/
+/*-----------------BLOG--------------------*/
+#titulo-blog {
+    padding: 2rem;
+    background-color: black;
+    color: whitesmoke;
+    width: 70vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 1rem;   
+}
 
-@media screen and (max-width: 768px) {
+.blog-temas{
+    padding: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    width: 50vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 25px;  
+}
+.entrada {
+    background-color: rgba(225, 132, 228, 0.2);
+    background-repeat: no-repeat;
+    height: 50vh;
+    border-radius: 24px;
 
-    /* Footer */ 
+}
 
-    footer{
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr 2fr;
-        min-height: fit-content;
-        min-width: fit-content;
-        grid-template-areas: 
-        "c1 c2"
-        "c3 c4"
-        "c5 c5"
-        "d d"
+.entrada-texto h2{
+    font-size: 1.3rem;
+}
 
-    }
-} 
+.entrada-texto h3{
+    font-size: 1.1rem;
+}
 
+.entrada-texto{
+    background-color: rgba(225, 132, 228, 0.8);
+    border-radius: 24px;
+    padding: 5px;
+    font-size: 1rem;
+}
 
+.entrada.uno{
+    background-image: url(../multimedia/gajar.jpg);
+}
 
+.entrada.dos{
+    background-image: url(../multimedia/chilli-oil.jpg);
+    
+}
+
+.entrada.tres{
+    background-image: url("../multimedia/kimono.jpg");
+    
+}
+.entrada.cuatro{
+    background-image: url("../multimedia/spices.webp");
+}
+.entrada.cinco{
+    background-image: url("../multimedia/koyasan.jpg");
+}
+.entrada.seis{
+    background-image: url("../multimedia/kanazawa.JPG");
+}
+
+.entrada.siete{
+    background-image: url("../multimedia/muroxian.jpeg");
+    margin-bottom: 100px;
+}
+
+.btn-leer-mas{
+    background-color:rgba(38, 4, 39); 
+    margin-left: 35%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 1,5rem;
+    border-radius: 12px;
+}
+
+.btn-leer-mas:hover{
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    font-weight: bold;
+    border-style: solid;
+}
